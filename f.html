@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+		<title>Generic - Phantom by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link href="http://static.tumblr.com/3yblkz0/dr1nxb5hh/slick.css" rel='stylesheet' type="text/css"/>
+		<link href="http://static.tumblr.com/3yblkz0/EkLnyuqmx/pxu_ps.css" rel="stylesheet" type="text/css"/>
+
+
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+							<!--<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+								</a>-->
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">home</a></li>
+							<li><a href="profile.html">profile</a></li>
+							<li><a href="contact.html">contact</a></li>
+
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>miscellaneous branding work</h1>
+							<!--<span class="image main"><img src="images/pic13.jpg" alt="" /></span>-->
+							<code><i class='bx bx-purchase-tag-alt'></i> #logo design, #digital branding, #illustration</code>
+					<h2>animations</h2>
+								<div class="box alt">
+									<div class="row gtr-uniform">
+										<div class="col-4"><span class="image fit"><img src="images/f/zw1.gif" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="images/f/plant.gif" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="images/f/lightbulb.gif" alt="" /></span></div>
+										<div class="col-4"><span class="image fit"><img src="images/f/mbs.gif" alt="" /></span></div>
+
+									</div>
+								</div>
+
+							
+								
+									
+
+									<!--
+																			<h2>full feed design</h2>
+									<div class="box alt">
+										<div class="row gtr-uniform">
+											<div class="col-4"><span class="image fit"><img src="https://imgur.com/d9XAKyO.png" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="https://imgur.com/E5NuDrd.png" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="https://imgur.com/jiOMHbB.png" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="https://imgur.com/BfwBXhM.png" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="https://imgur.com/ItQomGK.png" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="https://imgur.com/lhcFbub.png" alt="" /></span></div>
+										</div>
+									</div>
+									-->
+
+						</div>
+					</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+		<script src="https://static.tumblr.com/3yblkz0/VwZnm51yb/slick.min.js"></script>
+
+<script src="https://static.tumblr.com/qudkd6d/Az6nkemqr/pxuphotoset.min.js"></script>
+ 
+<script>
+$(document).ready(function(){
+
+$('.spot').click(function(){
+    $(".spotlight_outer").fadeIn();
+    });
+$('.ov').click(function(){
+    $(".spotlight_outer").fadeOut();
+    });
+
+
+$('.updates').slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false, 
+    slidesToShow: 1,
+    infinite: true,
+    dots:true, 
+    variableWidth:true,
+    });
+
+
+    var sticky = $('nav').offset().top;
+$(window).scroll(function(){
+    if( $(window).scrollTop() > sticky ) {
+        $('nav').addClass('nn');
+        } else {
+        $('nav').removeClass('nn');
+        }
+    });
+
+var icon = $('.ic').offset().top;
+$(window).scroll(function(){
+    if( $(window).scrollTop() >= icon) {
+        $('.title').addClass('cc');
+        } else {
+        $('.title').removeClass('cc');
+        }
+    });
+
+$(window).scroll(function(){
+    if($(document).height() - ($(window).height() + $(this).scrollTop()) > ($( "footer" ).height() + 40)) {
+        $('.pagination').addClass('pp');
+        } else {
+        $('.pagination').removeClass('pp');
+        }
+    if( $(window).scrollTop() ) {
+        $('.pagination').css({opacity: '1'});
+        } else {
+        $('.pagination').css({opacity: '0'});
+        }
+    });
+
+
+$('.photo-slideshow').pxuPhotoset({
+    lightbox: true,
+    rounded: false,
+    gutter: '5px',
+    borderRadius: '0px',
+    photoset: '.photo-slideshow',
+    photoWrap: '.photo-data',
+    photo: '.pxu-photo'
+    });
+$('#vid iframe').each(function(){
+    var scale = $(this).parents('#vid').width() / 500;
+    $(this).attr({
+    width: Math.floor($(this).attr('width') * scale),
+    height: Math.floor($(this).attr('height') * scale)
+    });
+    });
+
+$(".post_tags_inner").draggable({
+  axis : "x",
+  scroll: false,
+  stop: function() {
+    var pt_left = $(this).css("left").replace(/[^-\d\.]/g, '');
+    if(pt_left > 0){
+    $(this).animate({left: 0}, 400, 'easeOutExpo');
+    }
+    var pt_width = $(this).outerWidth();
+    var pt_parentWidth = $(".post_tags.draggable").outerWidth();
+    if(pt_width > pt_parentWidth) {
+    if(pt_left < pt_parentWidth - pt_width){
+    $(this).animate({left: pt_parentWidth - pt_width}, 400, 'easeOutExpo');
+    }
+    } else {
+    $(this).animate({left: 0}, 400, 'easeOutExpo');
+    }
+    }
+    });
+
+});
+</script>
+
+	</body>
+</html>
