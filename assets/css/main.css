@@ -410,6 +410,15 @@ input, select, textarea {
 		.row > .col-4 {
 			width: 33.33333%;
 		}
+		.row > .col-4 {
+			width: 33.33333%;
+
+		}
+
+		.col-4 > img {
+			object-fit: contain;
+      	  	display: block;
+		}
 
 		.row > .off-4 {
 			margin-left: 33.33333%;
@@ -3405,73 +3414,19 @@ input, select, textarea {
  
 .updates { 
 	margin: 0 0 0; 
-	overflow:hidden;
-	float:left; 
-	display: block;
-	padding: 0 1.5em 1em 0;
-
+	padding: 0;
 }
    
-.updates div {
+/*.updates div {
 	width: 400px;
 	height: 400px;
-    overflow: hidden;
     }
    
 .updates div img {
     width:400px;
 	height:auto;
     opacity:.8;
-    }
-      
- 
-/* Slick Dots */
- 
-.slick-dots { padding:0; position:relative; display:block; list-style:none; text-align:center; width:400px; }
-   
-.slick-dots li { 
-	width:20px; 
-	height:20px; 
-	margin:5px 5px 0 5px; 
-	padding:0; 
-	position:relative; 
-	display:inline-block; 
-	overflow:hidden; 
-	cursor:pointer; 
-}
-   
-.slick-dots li button { 
-	width:20px; 
-	height:20px; 
-	padding:5px; 
-	display:block;  
-	outline:0; 
-	border:0; 
-	-webkit-appearance: none;
-	background:transparent; 
-	color:transparent; 
-	font-size:0; }
+    }*/
 
-.slick-dots li button:hover, .slick-dots li button:focus { 
-	outline: none; 
-}
-   
-.slick-dots li button:before { 
-	content:"•"; 
-	width:20px; 
-	height:20px; 
-	top:0; 
-	left:0; 
-	position:absolute; 
-	opacity:.40; 
-	color:#888888; 
-	font-size:20px; 
-	line-height:20px; 
-	text-align:center; }
+	
  
-.slick-dots li button:hover:before, .slick-dots li button:focus:before { 
-	opacity:1; }
- 
-.slick-dots li.slick-active button:before { 
-	opacity:.75; 
-	color:#888888; }
