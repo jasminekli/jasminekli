@@ -2675,7 +2675,7 @@ input, select, textarea {
 					left: 0;
 					width: 100%;
 					height: 100%;
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 0.25px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='100' y2='100' /%3E%3Cline x1='100' y1='0' x2='0' y2='100' /%3E%3C/svg%3E");
+					/* background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 0.25px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='100' y2='100' /%3E%3Cline x1='100' y1='0' x2='0' y2='100' /%3E%3C/svg%3E");*/
 					background-position: center;
 					background-repeat: no-repeat;
 					background-size: 100% 100%;
@@ -2716,6 +2716,7 @@ input, select, textarea {
 				text-align: center;
 				text-decoration: none;
 				z-index: 3;
+				opacity:100%;
 			}
 
 				.tiles article > a > :last-child {
@@ -2727,9 +2728,19 @@ input, select, textarea {
 				}
 
 				.tiles article > a h2 {
+					-moz-transition: max-height 0.5s ease, opacity 0.5s ease;
+					-webkit-transition: max-height 0.5s ease, opacity 0.5s ease;
+					-ms-transition: max-height 0.5s ease, opacity 0.5s ease;
+					transition: max-height 0.5s ease, opacity 0.5s ease;
+					width: 100%;
+					max-height: 0;
+					line-height: 1.5;
+					margin-top: 0.35em;
+					opacity: 0;
 					margin: 0;
 				}
 
+				
 				.tiles article > a .content {
 					-moz-transition: max-height 0.5s ease, opacity 0.5s ease;
 					-webkit-transition: max-height 0.5s ease, opacity 0.5s ease;
@@ -2751,23 +2762,23 @@ input, select, textarea {
 			}
 
 			.tiles article.style2 > .image:before {
-				background-color: #ccc;
+				background-color:none;
 			}
 
 			.tiles article.style3 > .image:before {
-				background-color: #ccc;
+				background-color:none;
 			}
 
 			.tiles article.style4 > .image:before {
-				background-color: #ccc;
+				background-color: none;
 			}
 
 			.tiles article.style5 > .image:before {
-				background-color: #ccc;
+				background-color: none;
 			}
 
 			.tiles article.style6 > .image:before {
-				background-color: #ccc;
+				background-color: none;
 			}
 
 			body:not(.is-touch) .tiles article:hover > .image {
@@ -2779,7 +2790,7 @@ input, select, textarea {
 
 				body:not(.is-touch) .tiles article:hover > .image:before {
 					background-color: #333333;
-					opacity: 0.5;
+					opacity: 0.7;
 				}
 
 				body:not(.is-touch) .tiles article:hover > .image:after {
@@ -2787,6 +2798,11 @@ input, select, textarea {
 				}
 
 			body:not(.is-touch) .tiles article:hover .content {
+				max-height: 15em;
+				opacity: 1;
+			}
+
+			body:not(.is-touch) .tiles article:hover h2 {
 				max-height: 15em;
 				opacity: 1;
 			}
@@ -3421,6 +3437,7 @@ input, select, textarea {
 	float: left;
 	width: 50%;
   }
+  
   
   /* Clear floats after the columns */
   .updtrow:after {
