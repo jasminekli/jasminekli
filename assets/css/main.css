@@ -3417,6 +3417,24 @@ input, select, textarea {
 	padding: 0;
 }
    
+.updtcol {
+	float: left;
+	width: 50%;
+  }
+  
+  /* Clear floats after the columns */
+  .updtrow:after {
+	content: "";
+	display: table;
+	clear: both;
+  }
+
+  @media screen and (max-width: 600px) {
+	.updtcol {
+	  width: 100%;
+	}
+  }
+
 /*.updates div {
 	width: 400px;
 	height: 400px;
