@@ -55,9 +55,9 @@
 								<p> illustrator / <b>designer</b> / student<br>
 								take a look at my projects below <i class='bx bx-down-arrow-alt'></i>
 								<hr>
-								<p><div class="on"><div class="switch"></div></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;design work</p>
-       	 						<p><div class="off"><div class="switch"></div></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;commissions (3/5)</p>
-        						<p><div class="on"><div class="switch"></div></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;contact</p>
+								<p><div class="on"><div class="switch"></div></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;design work<br>
+       	 						<div class="off"><div class="switch"></div></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;commissions (3/5)<br>
+        						<div class="on"><div class="switch"></div></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;contact</p>
 							</header>
 							<section class="tiles">
 								<article class="style1">
@@ -73,7 +73,7 @@
 								</article>
 								<article class="style2">
 									<span class="image">
-										<img src="images/b/1.png" alt="" />
+										<img src="https://imgur.com/GDtYMtM.png" alt="" />
 									</span>
 									<a href="b.html">
 										<h2>entrepreneurship club</h2>
@@ -95,12 +95,12 @@
 								</article>
 								<article class="style4">
 									<span class="image">
-										<img src="https://imgur.com/d9XAKyO.png" alt="" />
+										<img src="https://imgur.com/hbEbmZp.png" alt="" />
 									</span>
 									<a href="d.html">
 										<h2>heart of the city edmonton</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>#print design, #digital design</p>
 										</div>
 									</a>
 								</article>
@@ -117,12 +117,12 @@
 								</article>
 								<article class="style6">
 									<span class="image">
-										<img src="https://imgur.com/G80Ba54.png" alt="" />
+										<img src="https://imgur.com/XS30sqt.png" alt="" />
 									</span>
 									<a href="f.html">
 										<h2>other motion graphics</h2>
 										<div class="content">
-											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
+											<p>#motion design, #kinetic typography</p>
 										</div>
 									</a>
 								</article>
@@ -236,6 +236,36 @@
 					</footer>
 
 			</div>-->
+			<div class="credit">
+				<script>
+					(function() {
+						var clock = document.querySelector('.credit');
+						var pad = function(x) {
+							return x < 10 ? '0' + x : x;
+						};
+						var currentTime = function() {
+							var currentTime = new Date();
+							var currentHours = currentTime.getHours();
+							var currentMinutes = currentTime.getMinutes();
+							var currentSeconds = currentTime.getSeconds();
+							
+							currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
+							currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
+							
+							var timeOfDay = (currentHours < 12) ? "" : "";
+							
+							currentHours = (currentHours > 12) ? currentHours - 12 : currentHours;
+							currentHours = (currentHours == 0) ? 12 : currentHours;
+					 
+							var time = + currentHours + ":" + currentMinutes + ":" + currentSeconds + " " + timeOfDay + " &nbsp;&nbsp; &copy; 2021 html5up";
+					 
+							clock.innerHTML = time;
+						};
+						currentTime();
+						setInterval(currentTime, 1000);
+					}());
+					</script>
+			</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
